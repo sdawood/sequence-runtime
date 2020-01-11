@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "12.13.1"
+      },
+      "debug": false
+    }]
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime", {
+      "helpers": false,
+      "regenerator": true
+    }]
+  ]
+}
