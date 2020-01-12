@@ -315,7 +315,7 @@ describe('scenario: pipe receiving a nested pipe', () => {
     const stateHistory = [
       ...pipe(
         ofType('something-else'),
-        unhandledAction => `rejected action of type: ${unhandledAction.type}`
+        unhandledPayload => `rejected action of type: 'something-else', payload: ${unhandledPayload}`
     )(store(actions))
     ];
 
@@ -329,7 +329,7 @@ describe('scenario: pipe receiving a nested pipe', () => {
         },
         30
       ],
-      "rejected action of type: undefined",
+      "rejected action of type: 'something-else', payload: Infinity",
       [
         {
           "state": 10
@@ -366,7 +366,7 @@ describe('scenario: pipe receiving a nested pipe', () => {
         },
         210
       ],
-      "rejected action of type: undefined",
+      "rejected action of type: 'something-else', payload: Infinity",
       [
         {
           "state": 10
