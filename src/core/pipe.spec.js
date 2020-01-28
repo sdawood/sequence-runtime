@@ -7,7 +7,7 @@ describe('scenario: pipe receiving a nested pipe', () => {
   it('works: pipe can have mapping and filtering functions, utilizing reduced(x)', () => {
     const result = [...pipe(
       n => n * 2, // mapping function
-      n => n > 4 ? F.reduced(n) : n, // filtering function
+      n => n > 4 ? F.reduced(n) : n, // filtering function?
       n => range({start: 1, end: n + 1}),
       pipe(
         n => n * 10 // range then pipe resembles concatMap(n => range(n)), n => n * 10)
