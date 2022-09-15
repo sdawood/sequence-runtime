@@ -38,7 +38,7 @@
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
     "rimraf": "^3.0.0",
-    "semantic-release": "^15.4.0",
+    "semantic-release": "^15.14.0",
     "travis-deploy-once": "^5.0.11"
   },
   "config": {
